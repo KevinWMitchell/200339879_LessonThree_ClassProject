@@ -17,12 +17,12 @@ namespace _200339879_LessonThree_ClassProject.Controllers
         // GET: Car
         public ActionResult Index()
         {
-            //return View();
+            return View();
 
             //this will redirect to home page 
             //return RedirectToAction("Index", "Home");
 
-            return Content("/Car - This is a list of cars from Content()");
+            //return Content("/Car - This is a list of cars from Content()");
         }
     }
 }
