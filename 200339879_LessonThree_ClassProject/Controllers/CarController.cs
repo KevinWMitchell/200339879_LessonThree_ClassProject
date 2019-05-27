@@ -17,12 +17,22 @@ namespace _200339879_LessonThree_ClassProject.Controllers
         // GET: Car
         public ActionResult Index()
         {
-            return View();
+            return View(carList);
 
             //this will redirect to home page 
             //return RedirectToAction("Index", "Home");
 
             //return Content("/Car - This is a list of cars from Content()");
+        }
+
+        public ActionResult Details(int? id) {
+
+            if (id == null || id > carList.Count) {
+                return Content("Invalid car id");
+            }
+            var ind = Convert.ToInt32(id) - 1;
+            var car = carList[ind];
+            return View(car);
         }
     }
 }

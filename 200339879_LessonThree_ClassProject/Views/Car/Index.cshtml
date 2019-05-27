@@ -1,8 +1,33 @@
-﻿
+﻿@model List<_200339879_LessonThree_ClassProject.Models.Car>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Cars List";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Cars List</h2>
 
+<table>
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Brand</td>
+            <td>Model</td>
+            <td>Type</td>
+            <td>Year</td>
+        </tr>
+    </thead>
+    <tbody>
+        
+        @foreach (var car in Model)
+        {
+        <tr>
+            <td>@car.Id </td> 
+            <td>@car.Brand</td>
+            <td>@car.Model</td>
+            <td>@car.Type</td>
+            <td>@car.Year</td>
+        </tr>
+
+        }
+    </tbody>
+</table>
